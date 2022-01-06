@@ -80,3 +80,7 @@ jobs:
 
       - name: Build
         run: yarn build:bin
+            - uses: actions/upload-artifact@v2
+      - with:
+        name: ${{ env.name }}-name
+        path: ${{ github.workspace }}
